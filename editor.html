@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Compiler</title>
+<script src="./lexanalysis.js"></script>
+<script src="./parser.js"></script>
+<script src="./codegen.js"></script>
+<script src="./code_runner.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    .header {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    .container {
+        width: 80%;
+        max-width: 800px;
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 40px;
+        margin-top: 20px; /* Added margin-top to create space */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .editor {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        resize: vertical;
+    }
+    .btn-run {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .output {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        white-space: pre-wrap;
+    }
+    .error {
+        margin-top: 10px;
+        color: #ff0000;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>MyLang Programming Language</h1>
+    </div>
+    <div class="container">
+        <textarea id="code" class="editor" placeholder="Write your code here..."></textarea>
+        <button id="btnRun" class="btn-run">Run Code</button>
+        <div class="output" id="output">Output will appear here</div>
+        <div class="error" id="error">Error messages will appear here</div>
+    </div>
+    <script src="./compiler.js"></script>
+</body>
+</html>

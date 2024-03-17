@@ -16,12 +16,6 @@ function compile(input)
     return code;
 }
 
-const input = `
-le x = 10
-if(x > 10)
-dikha x
-`
-
 const runButton = document.getElementById('btnRun');
 runButton.addEventListener('click', () => {
     const code = codeTextarea.value;
